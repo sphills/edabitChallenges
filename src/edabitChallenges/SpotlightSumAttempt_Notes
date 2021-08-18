@@ -65,24 +65,15 @@ private boolean validateSpotlightSumInt(int spotlightSumRequest) {
 	for (int i = 1;
 }
 
-private checkRows(int inputValue){
+private checkValid(int inputValueRow, inputValueElement) {
 
-	int rowModifier = 0;
-	
-	for (int i = 0; i < 4; i++){
-		switch (i) {
-			case 0:
-				rowModifier = 0;
-				break;
-			case 1:
-				rowModifier = 90;
-				break;
-			case 2:
-				rowModifier = 10;
-				break;
-			case 3:
-				rowModifier = 19;
-				break;
-		}
+	if (inputValueRow == 0 || inputValueRow == 9) {
+		sysout("Sorry, that number doesn't have 8 surrounding numbers.");
+		break;
 	}
+	
+	if (inputValueElement == 0 || inputValueElement == 9) {
+		sysout("Sorry, that number doesn't have 8 surrounding numbers.");
+		break;
+	} 
 }
