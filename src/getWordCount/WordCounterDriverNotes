@@ -17,7 +17,12 @@ It's been a while since I used a String delimiter, so this one is going to have 
 
 PROTOTYPE:
 
+public int countWords(String inputSentence){
 
+	String[] sentenceWords = inputSentence.split(" ");
+	
+	return String[].length;
+}
 
 POST ACTIVITY THOUGHTS:
 
