@@ -27,7 +27,7 @@ Once target value row and element are determined, sum row-1, row, and row+1 at e
 
 PROTOTYPE:
 
-spotlightSum(int spotlightNumberCenter){
+public int spotlightSum(int spotlightNumberCenter){
 	int targetValueRow;
 	int targetValueElement;
 	int spotlightSumValue;
@@ -41,7 +41,13 @@ spotlightSum(int spotlightNumberCenter){
 		}
 	}
 	
+	for (int i = -1; i < 2; i++) {
+		for (int j = -1; i < 2; j++){
+			spotlightSumValue += numberGrid[i][j];
+		}
+	}
 	
+	return spotlightSumValue;
 }
 
 /* The problem doesn't ask for validation, just says that any input number without 8 surrounding elements won't be tested
