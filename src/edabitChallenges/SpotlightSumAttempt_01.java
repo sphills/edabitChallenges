@@ -3,11 +3,21 @@ package edabitChallenges;
 public class SpotlightSumAttempt_01 {
 
 	int numberGrid[][] = new int[10][10];
-			
+	int targetValueRow = 0;
+	int targetValueElement = 0;
+	int spotlightSumValue;
+	int rowValueMinimum;
+	int rowValueMaximum;
+	int elementValueMinimum;
+	int elementValueMaximum;
+	
 	public int spotlightSum(int spotlightNumberCenter){
-		int targetValueRow = 0;
-		int targetValueElement = 0;
-		int spotlightSumValue = 0;
+
+		spotlightSumValue = 0;
+		rowValueMinimum = -1;
+		rowValueMaximum = 1;
+		elementValueMinimum = -1;
+		elementValueMaximum = 1;
 		
 		for (int i = 0; i < (numberGrid.length); i++) {
 			for (int j = 0; j < (numberGrid[i].length); j++) {
@@ -18,19 +28,46 @@ public class SpotlightSumAttempt_01 {
 			}
 		}
 		
-		if (checkValid(targetValueRow, targetValueElement)) {
-			System.out.println("Target row is: " + targetValueRow + ", and target element is: " + targetValueElement);
-	
-			for (int i = -1; i < 2; i++) {
-				for (int j = -1; j < 2; j++){
-					spotlightSumValue += numberGrid[targetValueRow + i][targetValueElement + j];
-				}
+		correctSearchArea(targetValueRow, targetValueElement);
+		
+		for (int i = rowValueMinimum; i < (rowValueMaximum + 1); i++) {
+			for (int j = elementValueMinimum; j < (elementValueMaximum + 1); j++){
+				spotlightSumValue += numberGrid[targetValueRow + i][targetValueElement + j];
 			}
-		} else {
-			System.out.println("That number was out of bounds.");
 		}
 		
 		return spotlightSumValue;
+	}
+
+	/* This method no longer validates the given inputs but modifies the rowMin/Max or elementMin/Max so we can still calculate the 
+	 * spotlight sum, even if the targeted number has less than 8 neighbors. If the input int isn't accounted for in the switch,
+	 * the values are untouched.
+	 */
+	private void correctSearchArea(int inputValueRow, int inputValueElement) {
+		modifyRowValue(inputValueRow);
+		modifyElementValue(inputValueElement);
+	}
+	
+	private void modifyRowValue(int inputValueRow) {
+		switch (inputValueRow) {
+		case 0:
+			rowValueMinimum = 0;
+			break;
+		case 9:
+			rowValueMaximum = 0; 
+			break;
+		}
+	}
+	
+	private void modifyElementValue(int inputValueElement) {
+		switch (inputValueElement) {
+		case 0:
+			elementValueMinimum = 0;
+			break;
+		case 9:
+			elementValueMaximum = 0; 
+			break;
+		}
 	}
 
 	// This constructor fills the numberGrid with 1 - 100 so that spotlightSum() can run
@@ -41,24 +78,5 @@ public class SpotlightSumAttempt_01 {
 				numberGrid[i][j] = ((j) + ((i * 10) + 1));
 			}
 		}
-	}
-	
-	/* This method validates the given inputs and returns a boolean that spotlightSum() uses to determine
-	 * whether or not to use the targetRowValue or targetRowElement values.
-	 */
-	private boolean checkValid(int inputValueRow, int inputValueElement) {
-		boolean isValueInput = true;
-		
-		if (inputValueRow == 0 || inputValueRow == 9) {
-			System.out.println("Sorry, that number doesn't have 8 surrounding numbers.");
-			isValueInput = false;
-		} else {
-			if (inputValueElement == 0 || inputValueElement == 9) {
-				System.out.println("Sorry, that number doesn't have 8 surrounding numbers.");
-				isValueInput = false;
-			}
-		}
-		
-		return isValueInput;
 	}
 }
