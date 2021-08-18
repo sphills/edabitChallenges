@@ -39,6 +39,7 @@ PROTOTYPE:
 					break;
 		}
 		
+		// This should've read 'if (firstString.equals(secondString)', I forgot and treated it like a primitive
 		if (firstString == secondString || firstInt == secondInt) {
 			return true;
 		} else {
