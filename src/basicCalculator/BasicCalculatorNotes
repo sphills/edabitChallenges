@@ -16,6 +16,9 @@ MY THOUGHTS:
 At first I was thinking that the way it wanted the method to run was to change the operator String directly into an expression,
 but now I realize I can probably just use a switch and get the same result.
 
+I also realized that if there's an integer pair that doesn't divide evenly, the result will be a floored/rounded-down int.
+I'll see about notifying the user or manually handling those cases shortly.
+
 PROTOTYPE:
 
 public Class BasicCalculator{
