@@ -7,11 +7,62 @@ PROMPT:
 "Given a 10x10 grid of numbers 1-100, return the Spotlight Sum, given a number n.
 The spotlight sum can be defined as the total of the 8 numbers immediately surrounding the number n on the grid, including n in the total."
 
+ELEMENTS:
+
+1) An int[10][10] numberGrid with the integers 1 - 100;
+2) A spotlightSum() method that takes an int argument and returns an int result
+
 MY THOUGHTS:
 
 The problem is to search a 2D int array for an input value, then get the 8 numbers surrounding the input value,
 add them together, add the input value, then return the final sum.
 
 The problem states that any number that doesn't have 8 numbers surrounding it are excluded in the unit testing,
-but I think there's a way around it.
+but I think there's a way around it. I'll focus on the original prompt and try to expand it once I've solved the base question.
 
+For the input number, find the three numbers directly above in the row prior to, in the same row as the input,
+and the three numbers directly below in the row following in my numberGrid[][].
+
+Once target value row and element are determined, sum row-1, row, and row+1 at elements element-1, element, and element+1.
+
+PROTOTYPE:
+
+spotlightSum(int spotlightNumberCenter){
+	int targetValueRow;
+	int targetValueElement;
+	int spotlightSumValue;
+	
+	for (int i = 0; i < (numberGrid.length - 1); i++) {
+		for (int j = 0; j < numberGrid[].length; j++) {
+			if (numbergrid[i][j] == spotlightNumberCenter) {
+			 	targetValueRow = i;
+			 	targetValueElement = j;
+			 }
+		}
+	}
+	
+	
+}
+
+/* The problem doesn't ask for validation, just says that any input number without 8 surrounding elements won't be tested
+ */ so this validation function is essentially extra credit.
+
+private boolean validateSpotlightSumInt(int spotlightSumRequest) {
+	boolean isValidTarget = true;
+	
+	for (int i = 1; i < 11; i ++) {
+		if (spotlightSumRequest == i) {
+			return false;
+		}
+	}
+	
+	for (int i = 1;
+}
+
+private checkRows(int inputValue){
+
+
+	for (int i = 0; i < 4; i++){
+		
+	}
+}
