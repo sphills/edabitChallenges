@@ -33,7 +33,7 @@ public int spotlightSum(int spotlightNumberCenter){
 	int spotlightSumValue;
 	
 	for (int i = 0; i < (numberGrid.length - 1); i++) {
-		for (int j = 0; j < numberGrid[].length; j++) {
+		for (int j = 0; j < (numberGrid[].length - 1); j++) {
 			if (numbergrid[i][j] == spotlightNumberCenter) {
 			 	targetValueRow = i;
 			 	targetValueElement = j;
@@ -56,7 +56,7 @@ public int spotlightSum(int spotlightNumberCenter){
 private boolean validateSpotlightSumInt(int spotlightSumRequest) {
 	boolean isValidTarget = true;
 	
-	for (int i = 1; i < 11; i ++) {
+	for (int i = 1; i < 11; i++) {
 		if (spotlightSumRequest == i) {
 			return false;
 		}
@@ -67,8 +67,22 @@ private boolean validateSpotlightSumInt(int spotlightSumRequest) {
 
 private checkRows(int inputValue){
 
-
+	int rowModifier = 0;
+	
 	for (int i = 0; i < 4; i++){
-		
+		switch (i) {
+			case 0:
+				rowModifier = 0;
+				break;
+			case 1:
+				rowModifier = 90;
+				break;
+			case 2:
+				rowModifier = 10;
+				break;
+			case 3:
+				rowModifier = 19;
+				break;
+		}
 	}
 }
