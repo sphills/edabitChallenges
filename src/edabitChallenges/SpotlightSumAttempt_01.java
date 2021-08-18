@@ -20,12 +20,12 @@ public class SpotlightSumAttempt_01 {
 		
 		System.out.println("Target row is: " + targetValueRow + ", and target element is: " + targetValueElement);
 
-/*		for (int i = -1; i < 2; i++) {
-			for (int j = -1; i < 2; j++){
-				spotlightSumValue += numberGrid[i][j];
+		for (int i = -1; i < 2; i++) {
+			for (int j = -1; j < 2; j++){
+				spotlightSumValue += numberGrid[targetValueRow + i][targetValueElement + j];
 			}
 		}
-*/		
+		
 		return spotlightSumValue;
 	}
 
@@ -34,7 +34,6 @@ public class SpotlightSumAttempt_01 {
 		for (int i = 0; i < numberGrid.length; i++) {
 			for (int j = 0; j < numberGrid[i].length; j++) {
 				numberGrid[i][j] = ((j) + ((i * 10) + 1));
-				System.out.println(numberGrid[i][j]);
 			}
 		}
 	}
