@@ -1,0 +1,24 @@
+ACTIVITY NOTES FOR:
+
+https://edabit.com/challenge/5LnycSd2xT4uwZCpi
+
+PROMPT:
+
+Create a method that takes a string and returns the word count. The string will be a sentence.
+
+ELEMENTS:
+
+1) public int countWords(String inputSentence){}
+2) String delimiter
+
+MY THOUGHTS:
+
+It's been a while since I used a String delimiter, so this one is going to have to be open-book 
+
+PROTOTYPE:
+
+
+
+POST ACTIVITY THOUGHTS:
+
+
