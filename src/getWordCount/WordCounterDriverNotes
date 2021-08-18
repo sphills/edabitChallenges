@@ -26,4 +26,21 @@ public int countWords(String inputSentence){
 
 POST ACTIVITY THOUGHTS:
 
+I feel pretty good about this activity, but like there's an opportunity to miscount possibly. Of course,
+the top-voted solution is even more code golf than mine, but seems to work just fine:
 
+	"public static int countWords(String s) { return s.split(" ").length; }"
+	
+	And the second top-voted solution seems possibly over-engineered, but I like it:
+	
+	"public static int countWords(String s) {
+      int count = 0;
+      for (int i = 0; i < s.length(); i++)
+      {
+        if (s.charAt(i) == ' ')
+          count++;
+      }
+      return count + 1;
+    }"
+    
+All-in-all, a little simple but I feel better for it.
