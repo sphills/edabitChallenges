@@ -33,7 +33,7 @@ public int spotlightSum(int spotlightNumberCenter){
 	int spotlightSumValue;
 	
 	for (int i = 0; i < (numberGrid.length - 1); i++) {
-		for (int j = 0; j < (numberGrid[].length - 1); j++) {
+		for (int j = 0; j < (numberGrid[i].length - 1); j++) {
 			if (numbergrid[i][j] == spotlightNumberCenter) {
 			 	targetValueRow = i;
 			 	targetValueElement = j;
