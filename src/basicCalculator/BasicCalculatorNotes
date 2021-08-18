@@ -46,3 +46,14 @@ public Class BasicCalculator{
 		return ;
 	} 
 }
+
+POST ACTIVITY THOUGHTS:
+
+I wasn't thinking about my case "/": clearly, because if firstInt/secondInt == 0, then firstInt was 0,
+when the test was trying to catch secondInt being 0, which would be undefined. I've updated my class
+here to be more accurate, which will correctly calculate 0/2 as 0, but 2/0 as "undefined".
+
+The unit tester in the edabit webapp caught it and made my mistake clear to me. Good to go now though!
+
+The submission checker did also show the class as taking int char int as the arguments, which I didn't do initially
+in my class. I conformed to the standard it requested, but am converting it to a String to get the practice in.
