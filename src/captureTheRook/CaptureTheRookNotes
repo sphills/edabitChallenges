@@ -1,0 +1,51 @@
+ACTIVITY NOTES FOR:
+
+https://edabit.com/challenge/rYD9NTBmNhaPM6wx2
+
+PROMPT:
+
+Write a function that returns true if two rooks can attack each other, and false otherwise.
+
+
+
+ELEMENTS:
+
+1) canCapture(String[] rookPlacements)
+2) String reader
+
+MY THOUGHTS:
+
+My first thought, off the back of having just completed getWordCount, is to read in the String[], break out the characters in each String[] element
+as String and int, and compare the first String or first int to the second String or second int.
+
+PROTOTYPE:
+
+	public static boolean canCapture(String[] rooks) {
+		String firstString;
+		int firstInt;
+		
+		String secondString;
+		int secondInt;
+		
+		for (int i = 0; i < rooks.length; i++) {
+			switch (i) {
+				case 0:
+					firstString = Character.toString(rooks[i].charAt(0));
+					firstInt = Character.getNumericValue(rooks[i].charAt(1));
+					break;
+				case 1:
+					secondString = Character.toString(rooks[i].charAt(0));
+					secondInt = Character.getNumericValue(rooks[i].charAt(1));
+					break;
+		}
+		
+		if (firstString == secondString || firstInt == secondInt) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+POST ACTIVITY THOUGHTS:
+
+
