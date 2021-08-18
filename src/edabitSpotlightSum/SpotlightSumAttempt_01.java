@@ -1,4 +1,4 @@
-package edabitChallenges;
+package edabitSpotlightSum;
 
 public class SpotlightSumAttempt_01 {
 

@@ -1,0 +1,45 @@
+Basic Calculator notes:
+
+https://edabit.com/challenge/gyfsGx7KrGLscxFrD
+
+PROMPT:
+
+Create a function that takes two numbers and a mathematical operator + - / * and will perform a calculation with the given numbers.
+
+ELEMENTS:
+
+1) Calculator class with calculator(int firstInt, String operator, int secondInt) method that returns int
+2) String to operator parser? switch (operator)?
+
+MY THOUGHTS:
+
+At first I was thinking that the way it wanted the method to run was to change the operator String directly into an expression,
+but now I realize I can probably just use a switch and get the same result.
+
+PROTOTYPE:
+
+public Class BasicCalculator{
+	public int calculator(int firstInputInt, String operator, int secondInputInt) {
+		int firstInt = firstInputInt;
+		int secondInt = secondInputInt;
+		int answer = 0;
+		
+		switch (operator) {
+			case "+":
+				answer = (firstInt + secondInt);
+				break;
+			case "-":
+				answer = (firstInt - secondInt);
+				break;
+			case "*":
+				answer = (firstInt(secondInt));
+				break;
+			case "/":
+				if (firstInt/secondInt == 0){
+					sysout("Divide by 0 error");
+				} else {
+				answer = (firstInt/secondInt);
+		
+		return ;
+	} 
+}
