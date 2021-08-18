@@ -7,7 +7,7 @@ public class BasicCalculator {
 		int secondInt = secondInputInt;
 		int finalValue = 0;
 		
-		// I know I could change the case to be case 'operator':, but I wanted to practice stringifying chars
+		// I know I could change the switch to be case 'operator': instead of case "operator":, but I wanted to practice stringifying chars
 		String stringifiedOperator = Character.toString(operator);
 		
 		switch (stringifiedOperator) {
