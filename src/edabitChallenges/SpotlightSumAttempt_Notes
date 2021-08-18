@@ -1,0 +1,17 @@
+SpotlightSum Attempt notes:
+
+https://edabit.com/challenge/ffhxMdssQfq5e9NkE
+
+PROMPT:
+
+"Given a 10x10 grid of numbers 1-100, return the Spotlight Sum, given a number n.
+The spotlight sum can be defined as the total of the 8 numbers immediately surrounding the number n on the grid, including n in the total."
+
+MY THOUGHTS:
+
+The problem is to search a 2D int array for an input value, then get the 8 numbers surrounding the input value,
+add them together, add the input value, then return the final sum.
+
+The problem states that any number that doesn't have 8 numbers surrounding it are excluded in the unit testing,
+but I think there's a way around it.
+
