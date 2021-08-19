@@ -1,0 +1,24 @@
+ACTIVITY NOTES FOR:
+
+https://edabit.com/challenge/hymPkXdhmDQLe87QT
+
+PROMPT:
+
+Create a function that takes an array and returns the difference between the biggest and smallest numbers.
+
+ELEMENTS:
+
+1) int[] numbers
+2) Arrays.sort(numbers)
+
+MY THOUGHTS:
+
+
+
+PROTOTYPE:
+
+
+
+POST ACTIVITY THOUGHTS:
+
+
