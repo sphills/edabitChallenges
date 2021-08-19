@@ -8,8 +8,9 @@ public class PerfectSquarePatch {
 		squarePatch = new int[inputInteger][inputInteger];
 				
 		for (int i = 0; i < inputInteger; i++) {
+			System.out.println();
 			for (int j = 0; j < inputInteger; j++) {
-				System.out.println(squarePatch[i][j] = inputInteger);
+				System.out.print((squarePatch[i][j] = inputInteger) + " ");
 			}
 		}
 		
