@@ -1,0 +1,32 @@
+ACTIVITY NOTES FOR:
+
+https://edabit.com/challenge/jfquehNLzpXW5ZQu5
+
+PROMPT:
+
+Given a total due and an array representing the amount of change in your pocket, determine whether or not you are able to pay for the item.
+Change will always be represented in the following order: int quarters, int dimes, int nickels, int pennies.
+
+To illustrate: changeEnough([25, 20, 5, 0], 4.25) should yield true, since having 25 quarters, 20 dimes, 5 nickels, and 0 pennies
+gives you 6.25 + 2 + .25 + 0 = 8.50.
+
+ELEMENTS:
+
+1) int pocketChange[];
+2) float Cost;
+3) public boolean changeEnough(int pocketChange[], float inputCost){}
+4) boolean hasEnoughChange;
+5) int convertedCost = (inputCost * 100);
+
+MY THOUGHTS:
+
+My first thought is to have a private int to simplify the math, then perform the calculation and return the hasEnoughChange boolean.
+I know I could use a double or a float, but since floats are smaller I'm happy with that.
+
+PROTOTYPE:
+
+
+
+POST ACTIVITY THOUGHTS:
+
+
