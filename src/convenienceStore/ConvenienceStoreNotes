@@ -28,7 +28,8 @@ PROTOTYPE:
 public class ConvenienceStore {
 
 	public boolean changeEnough(int[] pocketChange, float inputCost) {
-		int convertedCost = (inputCost * 100);
+		//Forgot to cast from float to int
+		int convertedCost = (int)(inputCost * 100);
 		int pocketChangeTotal = 0;
 		
 		 for (int i = 0; i < pocketChange.length; i++) {
@@ -55,11 +56,28 @@ public class ConvenienceStore {
 		 if (pocketChangeTotal >= convertedCost) {
 		 	return true;
 		 } else {
+		 	moreChangeRequired(pocketChangeTotal, convertedCost);
 		 	return false;
 	 	}
+	 }
+	 
+	 private void moreChangeRequired(int inputChangeTotal, int inputCost) {
+	 	double changeRemaining = ((inputCost - inputChangeTotal) * .01);
+	 	sysout("Sorry, you still need $" + changeRemaining + " to purchase this item.");
 	 }
 }
 
 POST ACTIVITY THOUGHTS:
 
+I'm feeling pretty comfortable with loops, arrays, casting, and manipulating values at this point, so this was pretty simple.
+The unit tests all passed clear, so I'm happy with it, but I'll add a private method that returns the amount of change (in dollars)
+that you still need to have more pocketChangeTotal than inputCost.
 
+I find this code golf-style answer pretty fun, and a brief version of my method:
+
+	" return change[0] * 25 + change[1] * 10 + change[2] * 5 + change[3] >= amountDue * 100; "
+	
+It seems like quite a few people made double variables for their equivalent of my int coinValue, which seems to have helped
+keep their changeEnough()s quite short.  
+
+Sometimes I feel silly for being so verbose in my methods, but I have fun typing it out and I find my versions quite readable.
