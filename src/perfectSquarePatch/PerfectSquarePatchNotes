@@ -8,15 +8,32 @@ Create a function that takes an integer and outputs an n x n square solely consi
 
 ELEMENTS:
 
-
+1) an int perfectSquare[][]
+2) a public method that returns perfectSquare[][]
 
 MY THOUGHTS:
 
-
+This seems simple enough, despite being about a 2D array. The class will have an instance variable of perfectSquare[][],
+and when the squarePatch() method is called, the array will be created and filled, then returned upon completion.
 
 PROTOTYPE:
 
+public class PerfectSquarePatch {
 
+	int squarePatch[][];
+	
+	public int[][] squarePatch(int inputInteger) {
+		squarePatch = new int[inputInteger][inputInteger];
+				
+		for (int i = 0; i < inputInteger; i++) {
+			for (int j = 0; j < inputInteger; j++) {
+				squarePatch[i][j] = inputInteger;
+			}
+		}
+		
+		return squarePatch;
+	}
+}
 
 POST ACTIVITY THOUGHTS:
 
