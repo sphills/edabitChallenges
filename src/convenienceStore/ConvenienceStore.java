@@ -27,10 +27,26 @@ public class ConvenienceStore {
 			pocketChangeTotal += (pocketChange[i] * coinValue);
 		 }
 		 
-		 if (pocketChangeTotal >= convertedCost) {
+		 if (pocketChangeTotal > convertedCost) {
+			customerChangeBack(pocketChangeTotal, convertedCost);
+			System.out.println("Here's your item. Thanks for your patronage!");
 		 	return true;
-		 } else {
-		 	return false;
+		 } else if (pocketChangeTotal == convertedCost) {
+			System.out.println("Whaddya know, perfect change. Here's your item!");
+			return true;
+	 	} else {
+	 		moreChangeRequired(pocketChangeTotal, convertedCost);
+			return false;
 	 	}
+	 }
+	 
+	 private void moreChangeRequired(int inputChangeTotal, int inputCost) {
+	 	double changeRemaining = ((inputCost - inputChangeTotal) * .01);
+	 	System.out.println("Sorry, you still need $" + changeRemaining + " to purchase this item.");
+	 }
+	 
+	 private void customerChangeBack(int inputChangeTotal, int inputCost) {
+	 	double customerChange = ((inputChangeTotal - inputCost) * .01);
+	 	System.out.print("You overpaid, so here's $" + customerChange + " in change. ");
 	 }
 }
