@@ -37,4 +37,10 @@ public class PerfectSquarePatch {
 
 POST ACTIVITY THOUGHTS:
 
+Looks like that passed the unit test. Because the test class is setup as 
 
+" public class Challenge {
+	public static int[][] squarePatch(int inputInteger) {} "
+	
+when I submitted my answer I moved my int squarePatch[][] inside the squarePatch() method to address the static/non-static discrepancy.
+I think I can edit it so that the output is in the 2D grid fashion.
