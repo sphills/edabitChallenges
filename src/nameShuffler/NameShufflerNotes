@@ -4,19 +4,31 @@ https://edabit.com/challenge/8WBpaPzLP7piuHNeR
 
 PROMPT:
 
-
+Create a method that accepts a string (of a person's first and last name) and returns a string with the first and last name swapped.
 
 ELEMENTS:
 
-
+1) String
+2) String delimiter
+3) String.split()
 
 MY THOUGHTS:
 
-
+I'll make a function nameShuffle(String fullName) that parses the string with space as the delimiter, stores a String firstName and String lastName,
+then returns a String newFullName.
 
 PROTOTYPE:
 
+public String nameShuffle(String fullName) {
 
+	String firstName = "";
+	String lastName = "";
+	String[] splitFullName = fullName.split(" ");
+	firstName = splitFullName[0];
+	lastName = splitLastName[1];
+	
+	return  lastName + " " + firstName;
+}
 
 POST ACTIVITY THOUGHTS:
 
