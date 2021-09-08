@@ -32,4 +32,7 @@ public String nameShuffle(String fullName) {
 
 POST ACTIVITY THOUGHTS:
 
-
+This was a light practice in manipulating Strings, and I felt pretty comfortable doing it. There's no validation, and it's hardcoded with the assumption
+that there'll only be two elements in the fullName variable, so it's not very accommodating of multiple names, but it does what the prompt requested.
+Going through other's solutions, it looks like it could be made even more concise than what I've come to, but I think this is a good balance of
+brevity and readability.
