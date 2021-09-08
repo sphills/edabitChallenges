@@ -37,4 +37,8 @@ public int triangle(int inputNumber) {
 
 POST ACTIVITY THOUGHTS:
 
+https://coolconversion.com/math/triangular-numbers/_500_triangular-number
 
+As shown here, the implementation works for any given number. It's been a long time since I took a math class of any kind, so it took some time for it to come back.
+I couldn't get anywhere with the original numbers, so I doubled them and tried again. It eventually came to me, and I Googled 'triangular number sequence' before I
+submitted my answer to edabit, but it was fun.
