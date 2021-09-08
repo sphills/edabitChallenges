@@ -1,0 +1,37 @@
+ACTIVITY NOTES FOR:
+
+https://edabit.com/challenge/aWzxPLibBLJgn8AbZ
+
+PROMPT:
+
+Write a function that returns true if there exists at least one number in an int[] that is larger than or equal to n.
+
+ELEMENTS:
+
+1) array for loop
+2) relational operators
+
+MY THOUGHTS:
+
+My first thought is just to parse the array in a simple for loop and return true as soon as a value that's greater than or equal to the given number.
+
+PROTOTYPE:
+
+public boolean existsHigher(int[] inputArray, int targetNumber){
+
+	if (inputArray.length > 0) {
+		for (int i = 0; i < inputArray.length; i++) {
+			if (inputArray[i] >= targetNumber) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+	} else {
+		return false;
+	}
+}
+
+POST ACTIVITY THOUGHTS:
+
+
