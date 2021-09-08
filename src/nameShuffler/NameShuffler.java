@@ -4,11 +4,9 @@ public class NameShuffler {
 
 	public String nameShuffle(String fullName) {
 		
-		String firstName = "";
-		String lastName = "";
 		String[] splitFullName = fullName.split(" ");
-		firstName = splitFullName[0];
-		lastName = splitFullName[1];
+		String firstName = splitFullName[0];
+		String lastName = splitFullName[1];
 		
 		return lastName + " " + firstName;
 	}
