@@ -24,4 +24,5 @@ public int differenceMaxMin(int[] inputArray) {
 
 POST ACTIVITY THOUGHTS:
 
-
+I did use the Arrays.sort() method, but then went back and implemented a nested for loop to sort the array manually.
+When the manual sort is called, the array is printed in ascending order while being sorted, and the difference is printed to console.
