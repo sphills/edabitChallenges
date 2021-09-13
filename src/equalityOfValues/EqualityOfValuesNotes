@@ -48,4 +48,28 @@ public int equal(int a, int b, int c) {
 
 POST ACTIVITY THOUGHTS:
 
+I'm nowhere near experienced enough to say that my final function can't be reduced any further (other than deleting whitespace),
+but it's pretty trim. Readable at a glance? No. Concise? Yes.
 
+I was browsing the other solutions and came across this:
+
+		public int equal(int a, int b, int c) {
+			int count = 0;
+			if (a == b){
+				count++;
+			}
+			if (b == c){
+				count++;
+			}
+			if (a == c){
+				count++;
+			}
+			if (count == 1)
+			{
+	      	count = 2;
+	    	}
+			return count;
+		}
+		
+which makes sense and is very easily read, but doesn't take advantage of any of the interesting operators. I don't really like the
+if (count == 1) block, but it passes the unit tester...
