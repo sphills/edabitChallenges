@@ -8,5 +8,7 @@ public class EqualityOfValuesDriver {
 		System.out.println(testEqualityOfValues.equal(3, 4, 1));
 		System.out.println(testEqualityOfValues.equal(3, 4, 3));
 		System.out.println(testEqualityOfValues.equal(1, 1, 1));
+		System.out.println(testEqualityOfValues.equal(2, 2, 1));
+		System.out.println(testEqualityOfValues.equal(5, 9, 9));
 	}
 }

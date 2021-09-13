@@ -10,7 +10,7 @@ public class EqualityOfValues {
 			returnInt = (b == c) ? 3: 2;
 			
 		} else {
-			returnInt = (b == c) ? 2: 0; 
+			returnInt = (b == c) ? 2: (a == c) ? 2: 0; 
 		}
 		
 		return returnInt;
