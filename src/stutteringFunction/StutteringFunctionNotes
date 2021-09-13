@@ -1,0 +1,45 @@
+ACTIVITY NOTES FOR:
+
+https://edabit.com/challenge/yzfiD6ZXt84qL3v2e
+
+PROMPT:
+
+Write a function that stutters a word as if someone is struggling to read it. The first two letters are repeated twice with an ellipsis ... and space after each, and then the word is pronounced with a question mark ?.
+
+Examples
+stutter("incredible") ➞ "in... in... incredible?"
+
+stutter("enthusiastic") ➞ "en... en... enthusiastic?"
+
+stutter("outstanding") ➞ "ou... ou... outstanding?"
+Notes
+Assume all inputs are in lower case and at least two-character long.
+
+ELEMENTS:
+
+1) public String stutter(String inputString)
+2) for loop
+3) String manipulation
+
+MY THOUGHTS:
+
+It's been a while, but I think I can use String.substring(x, y) to grab the necessary letters and repeat them.
+
+PROTOTYPE:
+
+public String stutter(String inputString) {
+
+	String returnString = "";
+	
+	for (int i = 0; i < 2; i++) {
+		returnString += (inputString.substring(0, 1) + "... ");
+	}
+	
+	returnString += (inputString + "\n");
+	
+	return returnString;
+}
+
+POST ACTIVITY THOUGHTS:
+
+
