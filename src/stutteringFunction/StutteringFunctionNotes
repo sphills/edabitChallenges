@@ -46,4 +46,11 @@ public String stutter(String inputString) {
 
 POST ACTIVITY THOUGHTS:
 
+I feel silly for forgetting that substring's end index was exclusive, but I was able to identify it and correct it.
 
+I liked other people's solutions, which was to just
+
+	String returnString = inputString.substring(0, 2) + "... ";
+	return returnString + returnString + inputString + "?";
+	
+I can appreciate the brevity, and that it doesn't do unnecessary work. 

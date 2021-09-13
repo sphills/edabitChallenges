@@ -5,13 +5,16 @@ public class StutteringFunction {
 	public String stutter(String inputString) {
 
 		String returnString = "";
-		
-		for (int i = 0; i < 2; i++) {
-			returnString += (inputString.substring(0, 1) + "... ");
+		if (inputString.length() >= 2) {
+			for (int i = 0; i < 2; i++) {
+				returnString += (inputString.substring(0, 2) + "... ");
+			}
+			
+			returnString += (inputString + "?");
+		} else {
+			returnString = (inputString + "?");
 		}
 		
-		returnString += (inputString + "\n");
-		
-		return returnString;
+		return returnString.toLowerCase();
 	}
 }
