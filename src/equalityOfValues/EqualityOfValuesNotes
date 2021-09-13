@@ -27,6 +27,9 @@ MY THOUGHTS:
 
 Use == to compare a and b, then b and c.
 
+	UPDATE:
+	I realized that I forgot to test for a == c in the else {}, so it doesn't return the correct number if a == c && a != b
+
 PROTOTYPE:
 
 public int equal(int a, int b, int c) {
