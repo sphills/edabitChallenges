@@ -4,5 +4,7 @@ public class StutteringFunctionDriver {
 
 	public static void main(String[] args) {
 		StutteringFunction testFunction = new StutteringFunction();
+		
+		System.out.println(testFunction.stutter("incredible"));
 	}
 }

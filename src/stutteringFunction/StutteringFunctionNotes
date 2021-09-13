@@ -25,6 +25,10 @@ MY THOUGHTS:
 
 It's been a while, but I think I can use String.substring(x, y) to grab the necessary letters and repeat them.
 
+UPDATE:
+I've misremembered how .substring works, as shown here: https://www.javatpoint.com/java-string-substring
+The String.substring(x, y) is inclusive-exclusive, so for my solution inputString.substring(0, 1) I should've written inputString.substring(0, 2)
+
 PROTOTYPE:
 
 public String stutter(String inputString) {
