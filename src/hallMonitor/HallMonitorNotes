@@ -1,0 +1,37 @@
+ACTIVITY NOTES FOR:
+
+https://edabit.com/challenge/p5PsoKc2z8QaYNjNG
+
+PROMPT:
+
+A floor plan is arranged as follows:
+
+Four rooms, which all lead into the hallway.
+It's impossible to move between rooms without first going into the hallway.
+
+Create a function which validates whether the path between rooms is possible. The hallway will be given as the letter "H".
+
+ELEMENTS:
+
+1) Arrays
+2) For loop
+3) public boolean possiblePath(int[] inputArray)
+
+MY THOUGHTS:
+
+The prompt doesn't lay out many specifics, just that "It's impossible to move between rooms without first going into the hallway."
+There's no other expectations or boundaries laid out, so first I'll define some here:
+
+	1) An input array of length 1 will always return true, as you can stay in the room you are currently in.
+	2) An input array of length >= 2 that doesn't contain H or the same room will always return false: you can't move from room 1 to 2
+		as their only connection is the hallway.
+	3) If array[i] != H && array[i + 1] != H, then possiblePath will return false. The entire sequence is not possible, even if 
+		other moves before or after i and i + 1 in the array are possible. 
+
+PROTOTYPE:
+
+
+
+POST ACTIVITY THOUGHTS:
+
+
