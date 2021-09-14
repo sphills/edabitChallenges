@@ -38,7 +38,11 @@ MY THOUGHTS:
 
 We'll assume that each function call is a new 'video' the user is visiting. Since this is merely a function challenge and not a class challenge,
 there'll be no variable in a scope higher than the function. Since there's no way to save the state in the function between calls,
-we're just testing that it responds to the input array correctly, not responds to each array in sequence. 
+we're just testing that it responds to the input array correctly, not responds to each array in sequence.
+
+	UPDATE:
+	I reversed the use of the ! negator in my head, which made the if (inputCommands.length) from line 9 of LikesVsDislikes.java 
+	evaluate incorrectly. I've since corrected it, and corrected a bug that hadn't appeared yet where an empty array would return a null value. 
 
 PROTOTYPE:
 
