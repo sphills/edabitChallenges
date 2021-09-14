@@ -1,0 +1,60 @@
+ACTIVITY NOTES FOR:
+
+https://edabit.com/challenge/eHA9jMjzADDo6PhuJ
+
+PROMPT:
+
+Write a function that does the following for the given values: add, subtract, divide and multiply . This is simply referred to as the basic arithmetic operations. The variables have to be defined, but in this challenge, it will be defined for you. All you have to do, is to check the variables, do some string to integer conversion, use some if conditions, and apply the arithmetic operation.
+
+	Examples:
+		operation("1",  "2",  "add" ) ➞ 3
+		
+		operation("4",  "5",  "subtract") ➞ -1
+		
+		operation("6",  "3",  "divide") ➞ 2
+		
+	Notes:
+		The numbers and operation are given as a string and should result to an integer value.
+		If the operation results to ArithmeticException, then return Integer.MIN_VALUE (e.g. division by zero).
+		Division results will be rounded down to its integral part.
+
+
+ELEMENTS:
+
+1) public static int operation(String firstInput, String secondInput, String operation) {}
+2) Integer.parseInt()
+3) switch (operation)
+
+MY THOUGHTS:
+
+I'll write a switch that performs the requested operation on the parsed strings from the arguments. 
+
+PROTOTYPE:
+
+public static int operation(String firstInput, String secondInput, String operation) {
+	int firstInt, secondInt, resultInt;
+	firstInt = Integer.parseInt(firstInput);
+	secondInt = Integer.parseInt(secondInput);
+	resultInt = 0;
+	
+	switch (operation) {
+		case "add":
+			resultInt = firstInt + secondInt;
+			break;
+		case "subtract":
+			resultInt = firstInt - secondInt;
+			break;
+		case "multiply":
+			resultInt = firstInt * secondInt;
+			break;
+		case "divide":
+			resultInt = firstInt / secondInt;
+			break;
+	}
+	
+	return resultInt;
+}
+
+POST ACTIVITY THOUGHTS:
+
+
