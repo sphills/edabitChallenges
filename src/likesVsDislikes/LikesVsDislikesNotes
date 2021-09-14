@@ -42,7 +42,24 @@ we're just testing that it responds to the input array correctly, not responds t
 
 PROTOTYPE:
 
+public String likeOrDislike(String[] inputCommands) {
 
+	String lastButton = "";
+	
+	if (!inputCommands.length > 1) {
+		for (int i = 0; i < inputCommands.length; i++) {
+			if (inputCommands[i].equals(lastButton)) {
+				lastButton = "Nothing";
+			} else {
+				lastButton = inputCommands[i]; 
+			}
+		}
+	} else {
+		lastButton = inputCommands[0];
+	}
+	
+	return lastButton;
+}
 
 POST ACTIVITY THOUGHTS:
 
