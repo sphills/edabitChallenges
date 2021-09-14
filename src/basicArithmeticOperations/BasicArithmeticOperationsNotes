@@ -57,4 +57,7 @@ public static int operation(String firstInput, String secondInput, String operat
 
 POST ACTIVITY THOUGHTS:
 
+After running the tester, I fixed the error covered by test03 and now the BasicArithmeticOperations.java runs perfectly (according to the tests)
 
+That was an interesting activity, and quite similar to BasicCalculator.java from previous challenges, but I enjoyed it and got valuable practice
+from using Integer.parseInt()

@@ -18,7 +18,11 @@ public class BasicArithmeticOperations {
 				resultInt = firstInt * secondInt;
 				break;
 			case "divide":
-				resultInt = firstInt / secondInt;
+				if (secondInt == 0) {
+					resultInt = Integer.MIN_VALUE;
+				} else {
+					resultInt = firstInt / secondInt;
+				}
 				break;
 		}
 		
