@@ -67,4 +67,15 @@ public String likeOrDislike(String[] inputCommands) {
 
 POST ACTIVITY THOUGHTS:
 
-
+ I ran out of free challenge review on edabit, so I wrote and ran my own JUnit from the challenge's test cases.
+ That test class is included in this commit.
+ 
+ Looks like my solution passes all the test cases, as when I ran the LikesVsDislikesTest.java via JUnit,
+ I had 13/13 successes with 0 errors or failures.
+ 
+ Initially I was frustrated that I ran out of free challenge reviews, but the tests are included in the code submission boxes
+ so I can still test them here in Eclipse.
+ 
+ All-in-all, a good experience with an interesting challenge. If this was a broader-scope prompt, I would've used a private String lastButton
+ variable outside of the function that it would use to store the state in. As it was, though, the function-scoped lastButton did its job
+ perfectly.
