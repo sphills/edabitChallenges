@@ -58,4 +58,5 @@ public static String sevenBoom(int[] inputArray) {
 
 POST ACTIVITY THOUGHTS:
 
-
+I'm quite comfortable now with my String manipulation, String-to-int comparison, and nested for loops.
+This was a fun one! I don't think it'd scale well with large arrays of large numbers, but it works just fine on a small scale. 
