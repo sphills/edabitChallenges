@@ -31,7 +31,30 @@ to 7. Break if a 7 is found.
 
 PROTOTYPE:
 
+public static String sevenBoom(int[] inputArray) {
 
+	String searchResult = "There is no 7 in the array.";
+	
+	for (int i = 0; i < inputArray.length; i++) {
+		if (inputArray[i] < 10) {
+			if (inputArray[i] == 7) {
+				searchResult = "Boom!";
+				break;
+			}
+		} else {
+			String integerValue = String.valueOf(inputArray[i]);
+			
+			for (int j = 0; j < integerValue.length; j++) {
+				if (integerValue[j].equals("7")) {
+					searchResult = "Boom!";
+					break;
+				}
+			}
+		}
+	}
+	
+	return searchResult;
+}
 
 POST ACTIVITY THOUGHTS:
 
