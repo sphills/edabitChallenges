@@ -1,0 +1,56 @@
+ACTIVITY NOTES FOR:
+
+https://edabit.com/challenge/E9AHcnWg7fDfardLF
+
+PROMPT:
+
+A string is an almost-palindrome if, by changing only one character, you can make it a palindrome. Create a function that returns true if a string is an almost-palindrome and false otherwise.
+
+	Examples:
+		almostPalindrome("abcdcbg") ➞ true
+		// Transformed to "abcdcba" by changing "g" to "a".
+		
+		almostPalindrome("abccia") ➞ true
+		// Transformed to "abccba" by changing "i" to "b".
+		
+		almostPalindrome("abcdaaa") ➞ false
+		// Can't be transformed to a palindrome in exactly 1 turn.
+		
+		almostPalindrome("1234312") ➞ false
+		
+	Notes:
+		Return false if the string is already a palindrome.
+
+ELEMENTS:
+
+1) for loop
+2) String manipulation
+
+MY THOUGHTS:
+
+I think that by taking in the String, looping through and comparing substrings at opposite ends for .equals you can relatively simply
+evaluate for almost-palindromicness (a fun not-word I just made)
+
+PROTOTYPE:
+
+public static boolean almostPalindrome(String inputString) {
+	int numLettersToChange = 0;
+	boolean isAlmostPalindrome = false;
+	
+	for (int i = 0; i < (Math.round((double) inputString.length/2))); i++) {
+		if (!(inputString.substring(i, i + 1).equals(inputString.substring(inputString.length - (i + 1), inputString.length - i)))) {
+			numLettersToChange++;
+			if (numLettersToChange > 1) {
+				break;
+			}
+		}
+	}
+	
+	isAlmostPalindrome = (numLettersToChange = 1);
+	
+	return isAlmostPalindrome;
+}
+
+POST ACTIVITY THOUGHTS:
+
+

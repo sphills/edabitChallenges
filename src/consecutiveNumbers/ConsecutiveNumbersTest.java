@@ -33,4 +33,9 @@ public class ConsecutiveNumbersTest {
 	public void test6() {
 		assertEquals(false, ConsecutiveNumbers.cons(new int[]{5, 3}));
 	}
+	
+	@Test
+	public void test7() {
+		assertEquals(false, ConsecutiveNumbers.cons(new int[]{1, 3, 3}));
+	}
 }
