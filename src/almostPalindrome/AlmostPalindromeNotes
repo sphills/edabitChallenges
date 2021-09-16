@@ -53,4 +53,5 @@ public static boolean almostPalindrome(String inputString) {
 
 POST ACTIVITY THOUGHTS:
 
-
+I'm very comfortable now with String manipulation, so this was pretty fun. It took me a few minutes to get sorted out in my head how I was
+evaluating the input for palindrome-ness and how to get Java to do it, and it seems like it worked out!
