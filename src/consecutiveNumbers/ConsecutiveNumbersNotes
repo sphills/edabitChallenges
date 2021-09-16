@@ -1,0 +1,36 @@
+ACTIVITY NOTES FOR:
+
+https://edabit.com/challenge/Md6usCHQ7Xsj2fQi3
+
+PROMPT:
+
+Create a function that determines whether elements in a n array can be re-arranged to form
+a consecutive list of numbers where each number appears exactly once.
+
+	Examples:
+		cons([5, 1, 4, 3, 2]) -> true
+		// Can be re-arranged to form [1, 2, 3, 4, 5]
+		
+		cons([5, 1, 4, 3, 2, 8]) -> false
+		// Forms [1, 2, 3, 4, 5, 8], which isn't consecutive
+		
+		cons([5, 6, 7, 8, 9, 9]) -> false
+		// 9 appears twice
+
+ELEMENTS:
+
+1) Arrays.sort()
+2) public static boolean cons(int[])
+
+MY THOUGHTS:
+
+I'll use Arrays.sort() to first sort the array, then loop through and determine if the change between i and i + 1 is equal to 1. If it's not,
+then it's either not consecutive (5 to 8 in line 15 of this notes document) or a repeat number (9 - 9 like in line 17)
+
+PROTOTYPE:
+
+
+
+POST ACTIVITY THOUGHTS:
+
+
