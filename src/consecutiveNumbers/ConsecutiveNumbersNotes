@@ -29,7 +29,22 @@ then it's either not consecutive (5 to 8 in line 15 of this notes document) or a
 
 PROTOTYPE:
 
+public static boolean cons(int[] inputArray) {
 
+	boolean isValid = false;
+	
+	Arrays.sort(inputArray);
+	
+	for (int i = 0; i < (inputArray.length - 1); i++) {
+		if ((i == (i + 1)) || (((i + 1) - i) > 1) {
+			break; // Since isValid is false by default, the loop will return false if either condition is true 
+		} else {
+			isValid = true;
+		}
+	}
+	
+	return isValid;
+}
 
 POST ACTIVITY THOUGHTS:
 
