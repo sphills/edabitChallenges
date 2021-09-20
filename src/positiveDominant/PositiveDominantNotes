@@ -31,9 +31,33 @@ MY THOUGHTS:
 My first thought is to clone the incoming array, use a nested for loop to compare all of the elements in the loop against each other,
 whether or not they are positive, and sum the number of unique values. Then, return int sumUniquePositive > sumUniqueNegative.
 
+	UPDATE:
+		I got through the below prototype code before I realized I wasn't sure how to make it count the number of values,
+		to include when j == 0. This commit is for accountability, but I have an idea.
+
 PROTOTYPE:
 
+public static boolean isPositiveDominant(int[] inputArray) {
 
+	int sumUniquePositive = 0;
+	int sumUniqueNegative = 0;
+	int[] clonedArray = inputArray.clone();
+	
+	for (int i = 0; i < inputArray.length; i++) {
+		for (int j = 0; j < clonedArray.length; j++) {
+			if (j == i){
+			} else {
+				if (clonedArray[j] != inputArray[j]) {
+					if (clonedArray[j] > 0) {
+						sumUniquePositive++;
+					} else if (clonedArray[j] < 0) {
+						sumUniqueNegative++;
+					}
+				}
+			}
+		} 
+	}
+}
 
 POST ACTIVITY THOUGHTS:
 
