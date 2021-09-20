@@ -42,7 +42,7 @@ public static boolean isPositiveDominant(int[] inputArray) {
 	int positiveArraySize = 0;
 	int negativeArraySize = 0;
 	
-	for (int h = 0; i < inputArray.length; i++) {
+	for (int h = 0; h < inputArray.length; h++) {
 		if (inputArray[h] > 0) {
 			positiveArraySize++;
 		} else if (inputArray[h] < 0) {
