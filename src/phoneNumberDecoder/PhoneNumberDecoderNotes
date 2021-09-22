@@ -51,7 +51,7 @@ public static String textToNum(String inputPhoneNumber) {
 	String integerPhoneNumber = "";
 	String decodedString = "";
 	
-	for (int i = 0; i < inputPhoneNumber.length; i++) {
+	for (int i = 0; i < inputPhoneNumber.length(); i++) {
 		switch (inputPhoneNumber.substring(i, i + 1).toLowerCase()) {
 			case "a": case "b": case "c":
 				decodedString = 2;
@@ -90,4 +90,10 @@ public static String textToNum(String inputPhoneNumber) {
 
 POST ACTIVITY THOUGHTS:
 
+I'm very curious as to what other edabit programmers have submitted, but because I'm not a paid subscriber I can't see their solutions.
+I feel as though this does a pretty good job of decoding the inputPhoneNumber String, though I don't think I'd use it to go through a phonebook
+as it is. It passed the JUnit test of 6 test cases in .1 seconds, which was... fine... but I can only imagine that going through
+a few dozen/hundred phone numbers would be significantly slower. I'm not sure how much of the .1 second was dedicated to JUnit overhead, but still.
 
+Also, I've had the "867-5309" jingle and "(800) 588-2300" jingle in my head this whole time, so here's hoping this final commit commits those
+tunes to someplace out of mind.  
