@@ -99,4 +99,13 @@ public static boolean isPositiveDominant(int[] inputArray) {
 
 POST ACTIVITY THOUGHTS:
 
+This challenge took me a long time to figure out how to express my train of thought in a way that Java could go through it in the same manner.
+The challenge on edabit intends for you to solve it without importing anything, so even though I wrote a class that could do it
+via ArrayList<Integer>, I wanted to figure out how to do it with a mere int[]. So, I took 5 or so hours to break down what ArrayList was doing
+in a way that int[] could emulate. It took me so long because for as familiar and comfortable as I am with nested for loops, I've not needed to
+resize Java arrays before, and especially not while retaining the data stored within them. Once I figured it out, I implemented the algorithm
+in three different classes out of spite and to make myself feel better, which is why we now have "PositiveDominant_IntArray,"
+"PositiveDominant_ArrayClone," and "PositiveDominant_ArrayList" in this package now. All three classes pass the exact same tests with the exact
+same results, which I'm very pleased with now that it's all settled.
 
+All three classes are thoroughly commented, so please feel free to browse through and follow along with my thought process.
