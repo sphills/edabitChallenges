@@ -40,4 +40,9 @@ class MagicSigilGeneratorTest {
 	public void test7() {
 		assertEquals("QCKBWNFXJMPSVRTHLZYDG", MagicSigilGenerator.sigilize("The quick brown fox jumps over the lazy dog"));
 	}
+	
+	@Test
+	public void test8() {
+		assertEquals("LNGMPYWHBKSTRFD", MagicSigilGenerator.sigilize("For a lonG time I waS a lonely Man walKing aLong a long empty road without breaks or rest or food"));
+	}
 }

@@ -71,4 +71,8 @@ public static String sigilize(String inputPhrase) {
 
 POST ACTIVITY THOUGHTS:
 
+It felt really good to catch that missed test case and implement both a test and a solution that ensures the edge case is covered. I ended up 
+referring to Oracle's documentation to help me find the last instance of a substring in a given String, which made me appreciate the work
+already done to make Java as programmer-friendly as possible.
 
+All-in-all, 10/10 challenge, one of my favorites. 
