@@ -1,0 +1,93 @@
+ACTIVITY NOTES FOR:
+
+https://edabit.com/challenge/8NZaLdJBkhZCgNBc7
+
+PROMPT:
+
+Create a program that converts a phone number with letters to one with only numbers.
+
+	Number	Letter
+	0	none
+	1	none
+	2	ABC
+	3	DEF
+	4	GHI
+	5	JKL
+	6	MNO
+	7	PQRS
+	8	TUV
+	9	WXYZ
+	
+	Examples:
+		textToNum("123-647-EYES") ➞ "123-647-3937"
+		
+		textToNum("(325)444-TEST") ➞ "(325)444-8378"
+		
+		textToNum("653-TRY-THIS") ➞ "653-879-8447"
+		
+		textToNum("435-224-7613") ➞ "435-224-7613"
+		
+	Notes:
+		All inputs will be formatted as a string representing a proper phone number in the format XXX-XXX-XXXX or (XXX)XXX-XXXX, using numbers and capital letters.
+		Check the Resources tab for more info on telephone keypads.
+
+ELEMENTS:
+
+1) For loop
+2) Switch
+3) String.substring
+4) String concatenation
+5) public static String textToNum(String inputPhoneNumber)
+
+MY THOUGHTS:
+
+Take the String inputPhoneNumber and loop through all of the substrings. If the current substring is a letter,
+switch on inputPhoneNumber.substring(x, y) and add a number to the String integerPhoneNumber. If it's anything else, just add that substring
+value to integerPhoneNumber.
+
+PROTOTYPE:
+
+public static String textToNum(String inputPhoneNumber) {
+	String integerPhoneNumber = "";
+	String decodedString = "";
+	
+	for (int i = 0; i < inputPhoneNumber.length; i++) {
+		switch (inputPhoneNumber.substring(i, i + 1).toLowerCase()) {
+			case "a": case "b": case "c":
+				decodedString = 2;
+				break;
+			case "d": case "e": case "f":
+				decodedString = 3;
+				break;
+			case "g": case "h": case "i":
+				decodedString = 4;
+				break;
+			case "j": case "k": case "l":
+				decodedString = 5;
+				break;
+			case "m": case "n": case "o":
+				decodedString = 6;
+				break;
+			case "p": case "q": case "r": case "s":
+				decodedString = 7;
+				break;
+			case "t": case "u": case "v":
+				decodedString = 8;
+				break;
+			case "w": case "x": case "y": case "z":
+				decodedString = 9;
+				break;
+			default:
+				decodedString = inputPhoneNumber.substring(i, i + 1);
+				break;
+		}
+		
+		integerPhoneNumber += decodedString;
+	}
+	
+	return integerPhoneNumber;
+}
+
+POST ACTIVITY THOUGHTS:
+
+
