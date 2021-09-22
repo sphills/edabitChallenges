@@ -41,6 +41,13 @@ MY THOUGHTS:
 The removal of spaces, vowels, and the capitalization of all letters I am quite confident I can handle, but the removal of duplicates while keeping the final occurrence is...
 daunting. I'm not sure how I want to tackle that.
 
+	UPDATE:
+		Using the Oracle Java documentation found here: https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#lastIndexOf(java.lang.String)
+		I was able to easily find the last instance of a given String. I forgot to document this in the "MagicSigilGenerator first pass" commit
+		
+		That said, there's a... bug, I suppose... where if a consonant is in the inputPhrase twice, once as lower and once as upper case, it won't catch that there's a duplicate as shown by
+		the test7() test I wrote. The expected output should be "QCKBWNFXJMPSVRTHLZYDG" but is instead "TQCKBWNFXJMPSVRTHLZYDG", which has 2 T's.
+
 PROTOTYPE:
 
 public static String sigilize(String inputPhrase) {
