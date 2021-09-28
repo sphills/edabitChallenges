@@ -65,7 +65,7 @@ public static String rps(String player1, String player2) {
 				paperValue = -1;
 				break;
 			default:
-				System.out.println("The value entered for Player 1 wasn't 'rock,' 'paper,' or 'scissors'. Please only enter 'rock,' 'paper,' or 'scissors'.);
+				System.out.println("The value entered for Player 1 wasn't 'rock,' 'paper,' or 'scissors'. Please only enter 'rock,' 'paper,' or 'scissors'.");
 		}
 		
 		switch (player2.toLowerCase()) {
@@ -79,7 +79,7 @@ public static String rps(String player1, String player2) {
 				player2Value = scissorsValue;
 				break;
 			default:
-				System.out.println("The value entered for Player 2 wasn't 'rock,' 'paper,' or 'scissors'. Please only enter 'rock,' 'paper,' or 'scissors'.);
+				System.out.println("The value entered for Player 2 wasn't 'rock,' 'paper,' or 'scissors'. Please only enter 'rock,' 'paper,' or 'scissors'.");
 			}
 			
 		if (player1Value > player2Value) {
