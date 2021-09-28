@@ -94,4 +94,40 @@ public static String rps(String player1, String player2) {
 
 POST ACTIVITY THOUGHTS:
 
+I've done similar projects before I started this edabit repository, and I've always hated the 
+	
+	if (input1.equals(testCase1) && input2.equals(testCase1)) { return "TIE" } else if (input1.equals(testCase1) && input2.equals(testCase2)) { return "Player 1 wins"} else if...
+	
+submissions I've seen from others. I feel like my solution accomplishes the same thing while being pretty readable. Just for review:
 
+Player 1's String input, player1, will be used to determine the values of rockValue, paperValue, and scissorsValue, which Player 2's String input player2
+will use to determine player2Value's... value. player1Value will always be 0, and only ever used to compare with player2Value to determine the winner.
+Meanwhile, player2Value will only ever be 1 or -1 when player1 and player2 aren't .equal(). Let's step through with the following game:
+
+1) Player 1 plays rock, while Player 2 plays paper (which we humans know will beat rock).
+
+2) rps() is called, which takes in String player1 "rock" and String player2 "paper".
+
+3) int rockValue, paperValue, scissorsValue, player1Value, and player2Value are all instantiated with 0 as their placeholder value.
+
+4) String winResult, the result we'll return once the function has decided the outcome of the game, is instantiated empty.
+
+5) First, our if statement compares if player1 equals() player2. This is the String version, since == doesn't work the same way idiomatically the
+	way we're used to with primitive types. Since player1 doesn't equal() player2, we skip the contents of this if and move to the else.
+
+6) Now, we enter this else statement and a switch that takes a lowercase player1. When player1 is rock, like in this game, then paperValue is 
+	assigned 1, and scissorsValue is assigned -1, since paper beats rock and rock beats scissors. Then, the break gets us out of the switch.
+	
+7) With the function variables paperValue and scissorsValue modified, it's time to move on to the next switch statement, where we evaluate player2.
+
+8) We enter the second switch statement, and since player2 is paper, player2Value is assigned 1 (as set by the previous switch statement).
+	We break the switch statement and move on.
+
+9) Now that player1Value is assigned a value (it was instantiated in line 11 with 0) and player2Value is assigned a value, we enter the if statement player1Value > player2Value.
+	Since 0 is not larger than 1, this returns false and we move on to the else if that follows.
+	
+10) In the else if statement, we compare player1Value < player2Value. Since 0 is smaller than 1, this statement is true and we enter into it.
+
+11) We assign winResult the value "Player 2 wins", and with that we exit the nested if statements.
+
+12) Finally, we return the String winResult for use by external forces, which in this game is "Player 2 wins"
