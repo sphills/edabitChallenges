@@ -36,11 +36,61 @@ ELEMENTS:
 MY THOUGHTS:
 
 There's an easy if (player1.equals(player2)) { return "TIE"; } that'll handle the ties, but I'm still deciding how to handle actual comparison
-between inputs. Do I want to map the input to numbers? I don't want to next if {} else if {} statements...
+between inputs. Do I want to map the input to numbers? I don't want to *nest if {} else if {} statements...
 
 PROTOTYPE:
 
-
+public static String rps(String player1, String player2) {
+	int rockValue = 0;
+	int paperValue = 0;
+	int scissorsValue = 0;
+	int player1Value = 0;
+	int player2Value = 0;
+	String winResult = "";
+	
+	if (player1.equals(player2)) {
+		winResult = "TIE";
+	} else {
+		switch (player1.toLowerCase()) {
+			case "rock":
+				paperValue = 1;
+				scissorsValue = -1;
+				break;
+			case "paper":
+				scissorsValue = 1;
+				rockValue = -1;
+				break;
+			case "scissors":
+				rockValue = 1;
+				paperValue = -1;
+				break;
+			default:
+				System.out.println("The value entered for Player 1 wasn't 'rock,' 'paper,' or 'scissors'. Please only enter 'rock,' 'paper,' or 'scissors'.);
+		}
+		
+		switch (player2.toLowerCase()) {
+			case "rock":
+				player2Value = rockValue;
+				break;
+			case "paper":
+				player2Value = paperValue;
+				break;
+			case "scissors":
+				player2Value = scissorsValue;
+				break;
+			default:
+				System.out.println("The value entered for Player 2 wasn't 'rock,' 'paper,' or 'scissors'. Please only enter 'rock,' 'paper,' or 'scissors'.);
+			}
+			
+		if (player1Value > player2Value) {
+			winResult = "Player 1 wins";
+		} else if (player1Value < player2Value) {
+			winResult = "Player 2 wins";
+		}
+	}
+	
+	return winResult;
+}
 
 POST ACTIVITY THOUGHTS:
 
