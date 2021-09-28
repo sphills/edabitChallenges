@@ -32,8 +32,51 @@ Then, get the substring from 0 to the colon (exclusive), convert to int, do math
 
 PROTOTYPE:
 
+public static String convertTime(String inputTime) {
 
+	int inputHour = 0;
+	int timeFlag = 0;
+	String returnTime = "";
+	String returnTimeSuffix = "";
+	String[] deconstructedTime = inputTime.split(":", 2);
+	
+	if ((inputTime.contains("a")) || (inputTime.contains("p"))) {
+		if (inputTime.substring((inputTime.length() - 2), (inputTime.length() - 1)).equals("a")) {
+			if (deconstructedTime[0] == 12) {
+				inputHour = 0;
+			} else {
+				inputHour = Integer.valueOf(deconstructedTime[0]);
+			}
+			break;
+		} else if (inputTime.substring((inputTime.length() - 2), (inputTime.length() - 1)).equals("p")) {
+			inputHour = Integer.valueOf(deconstructedTime[0]) + 12;
+			break;
+		}
+	} else {
+		inputHour = Integer.valueOf(deconstructedTime[0]);
+		timeFlag = 1;
+		
+		if (inputHour > 12) {
+			inputHour -= 12;
+			returnTimeSuffix = " pm";
+		} else if (inputHour == 12) {
+			returnTimeSuffix = " pm";
+		} else {
+			returnTimeSuffix = " am";
+		}
+	}
+	
+	switch (timeFlag) {
+		case 0:
+			returnTime = inputHour + ":" + deconstructedTime[1];
+			break;
+		case 1:
+			returnTime = inputHour + ":" + deconstructedTime[1] + returnTimeSuffix;
+			break;
+	}
+	
+	return returnTime;
+}
 
 POST ACTIVITY THOUGHTS:
-
 
