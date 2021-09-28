@@ -1,0 +1,39 @@
+ACTIVITY NOTES FOR:
+
+https://edabit.com/challenge/ayvtiYuzTxkphRBxB
+
+PROMPT:
+
+Create a function that converts 12-hour time to 24-hour time or vice versa. Return the output as a string.
+
+	Examples:
+		convertTime("12:00 am") -> "0:00"
+		convertTime("6:20 pm") -> "18:20"
+		convertTime("21:00") -> "9:00 pm"
+		convertTime("5:05") -> "5:05 am"
+		
+	Notes:
+		A 12-hour time input will be denoted with an am or pm suffix.
+		A 24-hour time input contains no suffix.
+
+ELEMENTS:
+
+1) String.substring(x, y)
+2) public static String convertTime(String inputTime)
+  2a) String inputHour = "";
+  2b) String returnTime = "";
+  2c) String returnTimeSuffix = "";
+3) Integer.valueOf()
+
+MY THOUGHTS:
+
+So, my thought is to loop through the string and look for a suffix. If there's a suffix, it's a 12- to 24-hour conversion. If not, 24- to 12-hour.
+Then, get the substring from 0 to the colon (exclusive), convert to int, do math, return value.
+
+PROTOTYPE:
+
+
+
+POST ACTIVITY THOUGHTS:
+
+
