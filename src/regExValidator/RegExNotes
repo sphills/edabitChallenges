@@ -55,4 +55,6 @@ public static boolean validate(String inputStringPIN) {
 
 POST ACTIVITY THOUGHTS:
 
-
+Having that Pattern class with the regular expressions made this function so easy. I was going to do some validation manually, by for looping
+through the string with a check that validates each substring and immediately returning false if the substring was a non-int value.
+All-in-all, this was a good lesson on the power of regexes. 
