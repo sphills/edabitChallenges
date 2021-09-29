@@ -80,3 +80,12 @@ public static String convertTime(String inputTime) {
 
 POST ACTIVITY THOUGHTS:
 
+I've finally got it up and working with some notable changes:
+
+1) The two ints I was using to store values originally have now been entirely replaced
+	by the String[] deconstructedTime variable being mutated to give the desired result.
+
+2) I realized the switch was unnecessary and the desired effect could be achieved by simply including the code within it
+	in the relevant if{} or else if {} statement, so some lines were saved there.
+	
+3) I shortened the first "if" statement by 33% from 12 lines to 8
