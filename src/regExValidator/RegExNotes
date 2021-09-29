@@ -1,0 +1,58 @@
+ACTIVITY NOTES FOR:
+
+https://edabit.com/challenge/sCP58J9vcexchgwo7
+
+PROMPT:
+
+Create a function that will test if a string is a valid PIN or not via a regular expression.
+
+A valid PIN has:
+
+Exactly 4 or 6 characters.
+Only numeric characters (0-9).
+No whitespace.
+
+	Examples:
+		validate("121317") ➞ true
+		
+		validate("1234") ➞ true
+		
+		validate("45135") ➞ false
+		
+		validate("89abc1") ➞ false
+		
+		validate("900876") ➞ true
+		
+		validate(" 4983") ➞ false
+		
+	Notes:
+		Empty strings should return false when tested.
+		If you need help, look into the Resources tab.
+
+ELEMENTS:
+
+1) String.length()
+2) Pattern (https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html)
+
+MY THOUGHTS:
+
+I wasn't sure how to approach this, so I used the "Resources" tab, googled a bit, and found the above link to Java's documentation.
+Now, my thought is this:
+
+Make an if that tests for any non-digit characters. If there are any non-digit characters, then immediately return false. If there aren't,
+test for PIN length. If that passes, return true. 
+
+PROTOTYPE:
+
+public static boolean validate(String inputStringPIN) {
+	
+	if (Pattern.matches("\\d{4}", inputStringPIN) || Pattern.matches("\\d{6}")) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+POST ACTIVITY THOUGHTS:
+
+
